@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Obrigatoriedade dos Votos </title>
+</head>
+<body>
+    <h1> Veja se você é obrigado a votar </h1>
+    
+    <script>
+        idade = parseFloat(prompt("Entre com a sua idade: "));
+
+        if (idade<16) {
+            document.write("Você ainda não pode votar!")
+        } else if (idade>=18 && idade<70) {
+            document.write("Seu voto é obrigatório!")
+        } else {
+            document.write("Seu voto é opcional!")
+        }
+    </script>
+</body>
+</html>
