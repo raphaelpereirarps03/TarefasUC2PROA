@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Saudações </title>
+</head>
+<body>
+    <h1> Calculando a saudação </h1>
+    
+    <script>
+        let hora = prompt ("Entre com a hora: ");
+
+        if (hora >= 0 && hora <5) {
+            document.write ("Bom Madrugada, amiguinho!");
+        } else if (hora >=5 && hora<12) {
+            document.write ("Bom dia, amiguinho!");
+        } else if (hora>=12 && hora<18) {
+            document.write ("Bom tarde, amiguinho!");
+            
+        } else if (hora >= 18 && hora<=24) {
+            document.write ("Bom noite, amiguinho!");
+        } else {
+            document.write ("Hora inválida, tente novamente!");
+        }
+    </script>
+</body>
+</html>

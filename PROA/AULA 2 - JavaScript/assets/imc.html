@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculando IMC</title>
+</head>
+<body>
+    <h1> Calculo de IMC </h1>
+
+    <script>
+        let peso = parseFloat(prompt("Entre com o seu peso: "));
+
+        let altura = parseFloat(prompt("Entre com a sua altura: "));
+        let imc = ((peso / (altura*altura)).toFixed(2));
+
+        document.write("O seu IMC é: " + imc + "." );
+
+        if (imc<=18.5) {
+            document.write("Você está abaixo do peso!");
+        } else if (imc>=18.6 && imc<=24.9) {
+            document.write("Você está com o peso adequado!");
+        } else if (imc>=25 && imc<=29.9) {
+            document.write("Você está com sobrepeso!");
+        } else if (imc>=30 && imc<=34.9) {
+            document.write("Você está com obesidade grau I!");
+        } else if (imc>=35 && imc<=39.9) {
+            document.write("Você está com obesidade grau II!");
+        } else {
+            document.write("Você está com obesidade grau III!");
+        }
+    </script>
+</body>
+</html>
