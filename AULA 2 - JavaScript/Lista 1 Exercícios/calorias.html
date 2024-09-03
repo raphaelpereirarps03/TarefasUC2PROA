@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculando as Calorias de uma Refeição </title>
+</head>
+<body>
+    <h1> Calculando Calorias</h1>
+
+    <script>
+        let refeicaoEscolhida="";
+        let caloriasTotais=0;
+        let prato = parseInt(prompt("Escolha um prato (Digite o número correspondente): \n1 - Vegetariano; \n2 - Peixe; \n3 - Frango; \n4 - Carne. "))
+        
+
+        switch (prato) {
+            case 1 : 
+            caloriasTotais = caloriasTotais + 180;
+            refeicaoEscolhida = "Vegetariano"
+            break
+            case 2 : 
+            caloriasTotais = caloriasTotais + 230
+            refeicaoEscolhida = "Peixe"
+            break
+            case 3 : 
+            caloriasTotais = caloriasTotais + 250
+            refeicaoEscolhida = "Frango"
+            break
+            case 4 : 
+            caloriasTotais = caloriasTotais + 350
+            refeicaoEscolhida = "Carne"
+            break
+            default:alert("Prato Inválido")
+        }
+
+        let sobremesa = parseInt(prompt("Escolha uma Sobremesa (Digite o número correspondente): \n1 - Abacaxi; \n2 - Sorvete(diet); \n3 - Mousse(diet) ; \n4 - Mousse de Chocolate. "))
+
+        switch (sobremesa) {
+            case 1 : 
+            caloriasTotais = caloriasTotais + 75
+            refeicaoEscolhida = (refeicaoEscolhida + ", Abacaxi")
+            break
+            case 2 : 
+            caloriasTotais = caloriasTotais + 110
+            refeicaoEscolhida = (refeicaoEscolhida + ", Sorvete(diet)")
+            break
+            case 3 : 
+            caloriasTotais = caloriasTotais + 170
+            refeicaoEscolhida = (refeicaoEscolhida + ", Mousse(diet)")
+            break
+            case 4 : 
+            caloriasTotais = caloriasTotais + 200
+            refeicaoEscolhida = (refeicaoEscolhida + ", Mousse de Chocolate")
+            break
+            default:alert("Sobremesa Inválida")
+        }
+
+        let bebida = parseInt(prompt("Escolha uma Bebida (Digite o número correspondente): \n1 - Chá; \n2 - Suco de laranja; \n3 - Suco de Melão; \n4 - Refrigerante (diet). "))
+
+        switch (bebida) {
+            case 1 : 
+            caloriasTotais = caloriasTotais + 20
+            refeicaoEscolhida = (refeicaoEscolhida + " e Chá")
+            break
+            case 2 : 
+            caloriasTotais = caloriasTotais + 70
+            refeicaoEscolhida = (refeicaoEscolhida + " e Suco de Laranja")
+            break
+            case 3 : 
+            caloriasTotais = caloriasTotais + 100
+            refeicaoEscolhida = (refeicaoEscolhida + " e Suco de Melão")
+            break
+            case 4 : 
+            caloriasTotais = caloriasTotais + 65
+            refeicaoEscolhida = (refeicaoEscolhida + " e Refrigerante")
+            break
+            default:alert("Bebida Inválida")
+        }
+
+        document.write("Sua refeição de " + refeicaoEscolhida + ", terá " + caloriasTotais + "cal.")
+
+        
+    </script>
+</body>
+</html>

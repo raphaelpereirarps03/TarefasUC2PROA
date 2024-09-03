@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cálculo de Crédito Especial</title>
+</head>
+<body>
+    <h1> Calculando Crédito Especial </h1>
+    
+    <script>
+        let saldoMedio = parseFloat(prompt("Entre com o seu salário médio do último ano: "));
+
+        if (saldoMedio < 501) {
+            document.write("Sem créditos disponíveis.<br>")
+        } else if (saldoMedio < 1001) {
+            document.write("30% do valor do saldo médio, ou seja: " + (((saldoMedio * 30)/100).toFixed(2)) + ". Juros: " +((((saldoMedio * 30)/100)* 2)/100).toFixed(2));
+        } else if (saldoMedio < 3001) {
+            document.write("40% do valor do saldo médio, ou seja: " + (((saldoMedio * 40)/100).toFixed(2)) + ". Juros: " +((((saldoMedio * 40)/100)* 2)/100).toFixed(2));
+        } else {
+            document.write("50% do valor do saldo médio, ou seja: " + (((saldoMedio * 50)/100).toFixed(2)) + ". Juros: " +((((saldoMedio * 50)/100)* 2)/100).toFixed(2));
+        }
+
+
+    </script>
+</body>
+</html>

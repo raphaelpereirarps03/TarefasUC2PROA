@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ordem Crescente </title>
+</head>
+<body>
+    <h1> Ordem Crescente</h1>
+    <script>
+        let n1 = parseInt(prompt("Entre com o primeiro valor: "));
+        let n2 = parseInt(prompt("Entre com o segundo valor: "));
+        let n3 = parseInt(prompt("Entre com o terceiro valor: "));
+        let maior=0;
+        let meio=0;
+        let menor=0; 
+        if (n1>n2 && n1>n3) {
+            maior = n1
+        } else if (n2>n1 && n2>n3) {
+            maior = n2
+        } else {
+            maior = n3
+        }
+        if (n1<n2 && n1<n3) {
+            menor = n1
+        } else if (n2<n1 && n2<n3) {
+            menor = n2
+        } else {
+            menor = n3
+        }
+        if (n1<maior && n1>menor ) {
+            meio = n1
+        } else if (n2<maior && n2>menor) {
+            meio = n2
+        } else if (n3<maior && n3>menor) {
+            meio = n3
+        } 
+        document.write(maior +", "+ meio + ", "+ menor)
+    </script>
+</body>
+</html>

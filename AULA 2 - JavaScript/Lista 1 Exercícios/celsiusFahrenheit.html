@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Conversão de Celsius para Fahrenheit </title>
+</head>
+<body>
+    <h1>
+       
+        13- Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. A fórmula de conversão é: F=(9*C+160) / 5, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.     
+    </h1>
+    
+    <script>
+        let celsius = parseFloat(prompt("Entre com a temperatura em °C para converter para °F: "))
+
+        fahrenheit = ((9*celsius+160)/5).toFixed(2);
+
+        document.write(celsius + "°C <br>")
+        document.write("Convertendo para Fahrenheit: <br>")
+        document.write(fahrenheit + "°F")
+    </script>
+</body>
+</html>

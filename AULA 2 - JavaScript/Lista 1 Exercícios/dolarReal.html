@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mais Nova </title>
+</head>
+<body>
+    <h1>
+        19- Elaborar um programa que efetue a apresentação do valor da conversão em real (R$) de um valor lido em dólar (US$). O programa deverá solicitar o valor da cotação do dólar e também a quantidade de dólares disponíveis com o usuário.     
+    </h1>
+    <script>
+        let dolares = parseFloat(prompt("Entre com o valor em dolares (U$): "));
+        let cotacao = parseFloat(prompt("Entre com o valor da cotação de dólares para reais: "))
+
+        let reais = (dolares * cotacao);
+        
+        document.write("U$" + dolares + "= R$" + reais)
+    </script>
+</body>
+</html>

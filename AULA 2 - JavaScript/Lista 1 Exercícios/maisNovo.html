@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mais Nova </title>
+</head>
+<body>
+    <h1>
+        18- Escreva um programa que leia o nome e a idade de 10 pessoas e exiba o nome da pessoa mais nova.     
+    </h1>
+    <script>
+        let nomeMaisNovo = "";
+        let idadeMaisNovo = 0;
+
+        let nome1 = prompt("Entre com a 1º nome: ");
+        let idade1 = parseInt(prompt("Entre com a 1º idade: "));
+        nomeMaisNovo = nome1;
+        idadeMaisNovo = idade1;
+
+        let nome2 = prompt("Entre com a 2º nome: ");
+        let idade2 = parseInt(prompt("Entre com a 2º idade: "));
+        if (idade2<idadeMaisNovo){
+            nomeMaisNovo = nome2;
+            idadeMaisNovo = idade2;
+        }
+        let nome3 = prompt("Entre com a 3º nome: ");
+        let idade3 = parseInt(prompt("Entre com a 3º idade: "));
+        if (idade3<idadeMaisNovo){
+            nomeMaisNovo = nome3;
+            idadeMaisNovo = idade3;
+        }
+        let nome4 = prompt("Entre com a 4º nome: ");
+        let idade4 = parseInt(prompt("Entre com a 4º idade: "));
+        if (idade4<idadeMaisNovo){
+            nomeMaisNovo = nome4;
+            idadeMaisNovo = idade4;
+        }
+        let nome5 = prompt("Entre com a 5º nome: ");
+        let idade5 = parseInt(prompt("Entre com a 5º idade: "));
+        if (idade5<idadeMaisNovo){
+            nomeMaisNovo = nome5;
+            idadeMaisNovo = idade5;
+        }
+        let nome6 = prompt("Entre com a 6º nome: ");
+        let idade6 = parseInt(prompt("Entre com a 6º idade: "));
+        if (idade6<idadeMaisNovo){
+            nomeMaisNovo = nome6;
+            idadeMaisNovo = idade6;
+        }
+        let nome7 = prompt("Entre com a 7º nome: ");
+        let idade7 = parseInt(prompt("Entre com a 7º idade: "));
+        if (idade7<idadeMaisNovo){
+            nomeMaisNovo = nome7;
+            idadeMaisNovo = idade7;
+        }
+        let nome8 = prompt("Entre com a 8º nome: ");
+        let idade8 = parseInt(prompt("Entre com a 8º idade: "));
+        if (idade8<idadeMaisNovo){
+            nomeMaisNovo = nome8;
+            idadeMaisNovo = idade8;
+        }
+        let nome9 = prompt("Entre com a 9º nome: ");
+        let idade9 = parseInt(prompt("Entre com a 9º idade: "));
+        if (idade9<idadeMaisNovo){
+            nomeMaisNovo = nome9;
+            idadeMaisNovo = idade9;
+        }
+        let nome10 = prompt("Entre com a 10º nome: ");
+        let idade10 = parseInt(prompt("Entre com a 10º idade: "));
+        if (idade10<idadeMaisNovo){
+            nomeMaisNovo = nome10;
+            idadeMaisNovo = idade10;
+        }
+
+
+        document.write("A pessoa mais nova é: " + nomeMaisNovo + ", tem " + idadeMaisNovo + " anos." )
+    </script>
+</body>
+</html>
