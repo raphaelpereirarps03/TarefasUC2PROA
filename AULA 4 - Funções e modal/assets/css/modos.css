@@ -1,0 +1,11 @@
+body {
+    background-color: bisque;
+    color: rgb(69,4,4);
+    text-align: center;
+}
+
+.myImage {
+    width: 500px;
+    height: 380px;
+    margin: auto;
+}
