@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando até um Valor Negativo ser Digitado</title>
+</head>
+<body>
+
+    <h1>  24- Escreva um programa que leia uma sequência de números do usuário e realize a soma desses números. Encerre a execução quando um número negativo for digitado. </h1>
+
+    <script>
+        let soma = 0;
+        let continuar = true;
+        while (continuar) {
+            let numero = prompt("Digite um número: ");
+            if (numero < 0) {
+                continuar = false;
+                alert("Soma: " + soma);
+            } else {
+                soma += parseInt(numero);
+                }
+        }
+    </script>
+    
+</body>
+</html>
