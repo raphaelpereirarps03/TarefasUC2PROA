@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sequência de Fibonacci com While </title>
+</head>
+<body>
+    <h1> 8) Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido usando o loop "while". </h1>
+    
+    <script>
+        let numero = parseInt(prompt("Entre com um termo para descobrirmos seu respectivo valor na sequência de Fibonacci: "))
+        let i = 1;
+        let antecessor = 0;
+        let atual = 1;
+        let proximo = 0;
+
+        document.write(atual + "<br />")
+
+        while (i<numero) {
+            proximo = antecessor + atual;
+            document.write(proximo + "<br />")
+
+            antecessor = atual;
+            atual = proximo;
+            i++
+        }
+    </script>
+</body>
+</html>
