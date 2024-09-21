@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Somando os pares até o número digitado </title>
+</head>
+<body>
+
+    <h1>
+        26) Escreva um programa que leia um número inteiro e exiba a soma de todos os números pares entre 1 e o número lido usando o loop "do-while".
+    </h1>
+
+    <script>
+        let numero = parseInt(prompt("Entre com um número para somarmos os pares entre 1 e ele: "));
+        let i=2;
+        let soma = 0;
+        do {
+            soma = soma + i;
+            i = i + 2;
+        } while (i<numero || i%2==0);
+
+        document.write("Número digitado: " + numero + "<br />")
+
+        document.write("Soma dos pares de 1 até " + numero + ": " + soma)
+
+        
+    </script>
+    
+</body>
+</html>

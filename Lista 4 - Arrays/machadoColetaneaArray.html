@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Coletânea Machado de Assis </title>
+</head>
+<body>
+
+    <h4> Machado do Assis foi um escritor brasileiro, considerado por muitos críticos, estudiosos, escritores e leitores o maior nome da literatura brasileira. <br /><br />
+
+        A sua lista de obras: <br /> <br />
+        
+        Romances <br />
+        Memorial de Aires (1908) <br />
+        Ressurreição (1872) <br />
+        Casa Velha (1885) <br />
+        Memórias Póstumas de Brás Cubas (1881) <br />
+        Helena (1876) <br />
+        Quincas Borba (1891) <br />
+        Esaú e Jacó (1904) <br />
+        A mão e a luva (1874) <br />
+        Dom Casmurro (1899) <br />
+        Iaiá Garcia (1878) <br /><br />
+        
+        Coletânea de Poesias <br />
+        Americanas (1875) <br />
+        Ocidentais (1880) <br />
+        Falenas (1870) <br />
+        Crisálidas (1864) <br />
+        Poesias Completas (1901) <br /><br />
+        
+        Coletânea de contos <br />
+        Várias Histórias (1896) <br />
+        Histórias sem Data (1884) <br />
+        Papéis Avulsos (1882) <br />
+        Contos Fluminenses (1870) <br />
+        Histórias da Meia-Noite (1873) <br />
+        Relíquias de Casa Velha (1906) <br />
+        Páginas Recolhidas (1899) <br /><br />
+        
+        Para cada um dos grupos de obras acima, ordene e crie um array com as obras. <br />
+        
+        Agora, ainda utilizando código, crie mais um array e insira os três primeiros livros de cada grupo de obras. </h4>
+
+        <script>
+            let tresPrimeiros = [];
+
+            let romances = ["Memorial de Aires (1908)", "Ressurreição (1872)","Casa Velha (1885)", "Memórias Póstumas de Brás Cubas (1881)", "Helena (1876)", "Quincas Borba (1891)", "Esaú e Jacó (1904)", "A mão e a luva (1874)", "Dom Casmurro (1899)", "Iaiá Garcia (1878)"];
+            romances.sort();;
+
+            let poesias = ["Americanas (1875)", "Ocidentais (1880)", "Falenas (1870)", "Crisálidas (1864)", "Poesias Completas (1901)"];
+            poesias.sort();
+
+
+            let contos = ["Várias Histórias (1896)", "Histórias sem Data (1884)", "Papéis Avulsos (1882)", "Contos Fluminenses (1870)", "Histórias da Meia-Noite (1873)", "Relíquias de Casa Velha (1906)", "Páginas Recolhidas (1899)"];
+            contos.sort();
+            
+
+            for (let i=0; i<3; i++) {
+                tresPrimeiros.push(romances[i]);
+            }
+
+            
+
+            for (let i=0; i<3; i++) {
+                tresPrimeiros.push(poesias[i]);
+            }
+            
+
+            for (let i=0; i<3; i++) {
+                tresPrimeiros.push(contos[i]);
+            }
+
+            document.write(tresPrimeiros.join("<br />"));
+        </script>
+
+    
+</body>
+</html>

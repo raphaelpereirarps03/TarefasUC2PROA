@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decomposição de um Valor</title>
+</head>
+
+<body>
+
+    <h1>
+        13)Faça um programa que leia um número inteiro e exiba os seus dígitos separadamente usando o loop "while".
+    </h1>
+
+    <script>
+        let numero = prompt("Entre com um número para o mesmo ser decomposto (dê preferência para números com 2 algarísmos ou mais): ");
+        let i = 1;
+        let divisor = 1;
+        let algarismo = 0;
+        let dividendo = numero;
+
+        // criando o multiplo de 10 que será o divisor do número de acordo com o seu tamanho e casas de unidade (unidade, dezena, centena, milhar...)
+        while (i<numero.length) {
+            divisor = divisor * 10;
+            i++;
+        }
+
+
+        document.write("Algarísmos que compõem " + numero + ": <br />");
+
+        while (dividendo>0){
+            /*pegando o algarismo, porém, ele ainda vem com casas decimais. Exemplo: se entrar com 12.345, ele vai dividir esse número por 10.000, resultando em 1,2345*/
+            algarismo = dividendo/divisor;
+
+            /*Agora eu vou atualizar o dividendo, se antes era 12345, agora será o resultado do resto da divisão, ou seja, o que está depois da vírgula, 2345*/
+            dividendo = dividendo%divisor;
+
+            /*E agora, se o divisor antes era 10.000, agora ele será 1000*/
+            divisor = divisor / 10;
+
+            /*Verificando para a exibição, se o dividendo for maior que 0, significa que esse ciclo se repetirá mais uma vez, ou seja, terá mais um algarismo pela frente, logo, precisa de um ".", se não, significa que chegou em 0 e consequentemente no último algarismo, então será um "." ao lado do número. */
+            if (dividendo>0) {
+                document.write(Math.trunc(algarismo) + ", ") // Math.trunc() serve para pegar apenas o número inteiro, ou seja, antes da vírgula, e aí o parametro dessa função é o número que sofrerá isso
+            } else {
+                document.write(Math.trunc(algarismo) + ". ")
+            }
+            
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

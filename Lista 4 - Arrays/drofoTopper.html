@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Drofo e Topper </title>
+</head>
+
+<body>
+    <h4>
+        Drofo e Topper estão em uma aventura mágica. Faça um programa que contenha um inventário para cada um dos dois
+        aventureiros - esse inventário será um array. <br /> <br />
+
+        Drofo terá um anel da invisibilidade, dois pares de botas mágicas, uma poção do sono e duas poções da inocência
+        em seu inventário e nessa ordem.  <br />
+        Torper terá uma capa da invisibilidade, uma pedra do despertar, uma varinha das varinhas, uma poção da inocência
+        e duas poções da mentira, poção anti-inteligência e nessa ordem.  <br /> <br />
+
+        No meio de sua jornada, Torper consumiu uma das poções da mentira, perdeu sua pedra e ganhou um par de botar
+        mágicas do Drofo, achou um escudo mágico e uma espada mágica. <br />
+        Descreva cada uma das ações acima. utilizando código (utilize comentários para ficar mais claro). <br /> <br />
+
+        No meio da sua jornada, Drofo, ganhou mais uma bota mágica, usou sua poção do sono e consumiu a poção
+        anti-inteligência do Torper, encontrou um ovo de dragão e uma coxinha. <br />
+        Descreva cada uma das ações acima. utilizando código. <br /> <br />
+
+        Exiba o resultado final de cada um dos inventários utilizando "document.write" <br />
+    </h4>
+
+
+    <script>
+        // Inventário de Drofo no começo 
+        let drofo = ["Anel de Invisibilidade", "Botas Mágicas", "Botas Mágicas", "Poção do Sono", "Poção Inocência ", "Poção Inocência", ];
+        document.write("Inventário de Drofo Inicialmente: <br />")
+        document.write(drofo.join("<br />") + "<br />");
+        
+        document.write("    <br />")
+
+        // Inventário de Topper no começo
+        let topper = ["Capa da Invisibilidade", "Pedra do Despertar", "Varinha das Varinhas", "Poção Inocência", "Poção da Mentira ", "Poção da Mentira", "Poção Inteligência"];
+        document.write("Inventário de Topper Inicialmente: <br />")
+        document.write(topper.join("<br />") + "<br />");
+
+        document.write("    <br />")
+
+
+
+        // Toper consume uma poção da mentira
+        topper.splice(4, 1)
+        // perde sua pedra do despertar
+        topper.splice(1, 1)
+        // e ganha um par de botas de Drofo
+        topper.push("Botas Mágicas")
+
+        // Drofo ganha uma bota mágica
+        drofo.splice(3, 1)
+        //usou a poção anti inteligência de Topper
+        topper.splice(3, 1)
+        // encontrou um ovo de dragão e uma coxinha
+        drofo.push("Ovo de Dragão")
+        drofo.push("Coxinha")
+
+
+        // Inventário de Drofo no final
+        document.write("Inventário de Drofo Ao Fim da Jornada: <br />")
+        document.write(drofo.join("<br />") + "<br />");
+
+        document.write("    <br />")
+
+        // Inventário de Drofo no final
+        document.write("Inventário de Topper Ao Fim da Jornada: <br />")
+        document.write(topper.join("<br />") + "<br />");
+
+
+
+    </script>
+
+</body>
+
+</html>

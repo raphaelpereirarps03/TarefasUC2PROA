@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Calculando média de 5 valores com While </title>
+    <title> Calculando a média de 5 nºs com do-while</title>
 </head>
 <body>
+
     <h1>
-        4 - Faça um programa que leia 5 números inteiros usando o loop "while" e exiba a média aritmética dos valores lidos.
+        19 - Faça um programa que leia 5 números inteiros usando o loop "do-while" e exiba a média aritmética dos valores lidos.
     </h1>
 
     <script>
@@ -17,13 +18,13 @@
        let media = 0;
        let i=1;
        let numeros ="";
-        while (i<6) {
+        do {
            valorText = prompt("Entre com o " + i + "º valor para calcularmos a média: ");
            numeros = numeros + valorText + ", ";
            valor = parseInt(valorText);
            soma = soma + valor;
            i++;
-        }
+        } while (i<6);
 
 
         media = (soma/5).toFixed(1);

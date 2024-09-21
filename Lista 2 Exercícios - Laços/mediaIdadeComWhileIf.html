@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Média de Idades com While e If </title>
+</head>
+<body>
+    <h1>
+        15) Crie um programa que leia o nome e a idade de várias pessoas usando o loop "while" até que o nome "fim" seja informado. Ao final, exiba a média das idades.
+    </h1>
+
+    <script>
+        let idade = 0;
+        let soma = 0;
+        let continua = true;
+        let i = 0;
+        
+        while (continua) {
+            let nome = prompt ("Entre com um nome:");
+            if (nome == "fim") {
+                continua=false;
+            } else {
+                idade = parseInt(prompt("Entre com uma idade: "));
+                soma = soma + idade;
+                i++;
+            }
+
+        }
+        document.write("A média de idades é: " + (soma/i));
+
+    </script>
+    
+</body>
+</html>
