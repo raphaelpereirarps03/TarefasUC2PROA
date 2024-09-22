@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Arítmética dos Números 15 à 100</title>
+</head>
+<body>
+    <h1>
+        4 - Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100 (inclusive).
+    </h1>
+
+    <script>
+        let soma = 0;
+        let j = 0;
+        let media = 0;
+
+        /*
+        //usando o método da progressão aritmética
+        let primeiroTermo = 15;
+        let ultimoTermo = 100;
+        media = (primeiroTermo + ultimoTermo)/2    
+        */ 
+
+        for (let i=15;i<101;i++) {
+            soma = soma + i;
+            j++;
+        }
+        
+
+        media = soma/j
+
+        document.write("A média aritmética dos números entre o intervalo de 15 até 100 é: " + media.toFixed(2));
+    </script>
+    
+</body>
+</html>

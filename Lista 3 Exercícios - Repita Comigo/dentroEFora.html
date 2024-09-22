@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Números dentro do intervalo de 24 à 42</title>
+</head>
+<body>
+    <h1>
+        11 - Escreva um programa em que o usuário informe 10 valores e escreva quantos desses valores lidos estão entre os números 24 e 42 (incluindo os valores 24 e 42) e quantos deles estão fora deste intervalo.
+    </h1>
+
+    <script>
+        let numero = 0;
+        let i = 1;
+        let dentro = "";
+        let fora = 0
+        let dentroString ="";
+        let foraString=""
+        let totalDentro = 0
+        let totalFora = 0
+        while (i<=10) {
+            numero=parseInt(prompt("Entre com um número: "));
+            if (numero>=24 && numero<=42) {
+                dentro=dentro+ numero + ", ";
+                totalDentro++
+            } else {
+                fora=fora+ numero + " ";
+                totalFora++
+            }
+            i++;
+        }
+
+        dentroString = "24, " + dentro + " 42."
+        foraString = fora
+
+        document.write("Números dentro do intervalo de 24 à 42: " + dentroString + " Totalizando: " + totalDentro + " (Não considerando o 24 e o 42, pois eles não foram digitados, eram os parâmetros, início e fim. )<br />" )
+        document.write("Números fora do intervalo de 24 à 42: " + fora + ". Totalizando: " + totalFora + "<br />" )
+    </script>
+</body>
+</html>

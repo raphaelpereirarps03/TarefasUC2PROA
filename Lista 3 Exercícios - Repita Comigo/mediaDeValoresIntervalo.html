@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Arítmética de um intervalo</title>
+</head>
+<body>
+    <h1>
+        5 - Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo.
+    </h1>
+
+    <script>
+        let soma = 0;
+        let media = 0;
+        let j = 0;
+        let maior = 0;
+
+        let menor = parseFloat(prompt("Entre com o primeiro valor do intervalo (ele precisar ser menor que o segundo): "))
+
+        do {
+            maior = parseFloat(prompt("Entre com o segundo valor do intervalo (ele precisar ser maior que o segundo): "))
+        } while (maior<=menor);
+
+
+        media = (menor + maior)/2
+
+        document.write("A média aritmética dos números " +menor+" e " + maior + " é: " + media.toFixed(2) + "<br />");
+
+        for (let i=menor;i<=maior;i++) {
+            soma = soma + i;
+            j++;
+        }
+
+        media = soma/j
+        document.write("A média aritmética dos números entre o intervalo de " +menor+" até " + maior + " é: " + media.toFixed(2));
+        
+
+        /*
+        //usando o método da progressão aritmética
+        let primeiroTermo = 15;
+        let ultimoTermo = 100;
+        media = (primeiroTermo + ultimoTermo)/2    
+        */ 
+
+        
+        
+
+        media = soma/j
+
+    </script>
+    
+</body>
+</html>

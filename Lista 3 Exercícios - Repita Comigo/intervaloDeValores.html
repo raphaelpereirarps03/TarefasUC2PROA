@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exibição de um intervalo</title>
+</head>
+<body>
+    <h1>
+        8 - Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive) e N (inclusive). Considere que o N será sempre maior que ZERO.
+        N  é um valor informado pelo usuário
+    </h1>
+
+    <script>
+        let maior = 0;
+        let menor = 1;
+
+        do {
+            maior = parseInt(prompt("Entre com o segundo valor do intervalo (ele precisar ser maior que o segundo): "))
+        } while (maior<=menor);
+
+        for (let i=menor;i<=maior;i++) {
+           document.write(i + " ");
+        }
+
+
+    </script>
+    
+</body>
+</html>

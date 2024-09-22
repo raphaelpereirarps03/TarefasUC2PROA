@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Media simples e validação da nota</title>
+</head>
+<body>
+    
+    <h1>
+        7 - Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total.
+        Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário. 
+    </h1>
+
+    <script>
+        let nota = 0;
+        let soma = 0;
+        let media = 0;
+        let i = 1;
+        let continua = true;
+
+        while (i<=6) {
+            continua = true;
+            while(continua) {
+                nota = parseInt(prompt("Entre com o valor da " + i + "ª nota (Números de 1 à 10): "))
+                if (nota<0 || nota>10) {
+                    alert("Valor inválido, tente novamente (Valores válidos: 1 à 10).")
+                } else {
+                    continua = false;
+                }
+            }
+            soma = soma + nota;
+            i++
+        }
+
+        media = soma/(i-1);
+
+        document.write("Média: " + media.toFixed(2))
+
+
+
+    </script>
+</body>
+</html>

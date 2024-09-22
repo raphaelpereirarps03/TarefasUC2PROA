@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descobrindo os Divisores de um Número: </title>
+</head>
+<body>
+    
+    <h1>
+        36) Crie um programa que leia um número inteiro positivo e exiba todos os divisores desse número usando o loop "for".
+    </h1>
+
+    <script>
+        let divisor = 0;
+        let numero = 0;
+
+        numero = parseInt(prompt("Entre com o valor que você deseja saber seus divisores:"));
+        document.write("Número Digitado: " + numero + "<br />")
+        document.write("Divisores: <br />" )
+
+
+
+        if (numero==0) {
+            document.write("Zero é indivisível, tente outro valor");
+        } else {
+            for (divisor=numero;divisor>0; divisor--) {
+                if (numero%divisor==0) {
+                    document.write(divisor + "<br />")
+                }
+               
+            }
+        }
+
+        document.write(divisores)
+    </script>
+    
+</body>
+</html>

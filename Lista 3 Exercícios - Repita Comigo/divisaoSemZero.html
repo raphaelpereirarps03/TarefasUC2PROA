@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Divisão de Dois Números e o Segundo não pode ser 0</title>
+</head>
+<body>
+
+    <h1>
+        1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual ou menor que ZERO, deve ser lido um novo valor. Ou seja, para o segundo valor não pode ser aceito o valor zero, nem um valor negativo.  O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor.
+    </h1>
+    
+
+
+    <script>
+        let dividendo = parseFloat(prompt("Entre com o valor que será dividido (dividendo): "));
+        let divisor = 0;
+        let resultado = 0;
+
+        do {
+            divisor = parseFloat(prompt("Entre com o valor que será o divisor (Evite o número 0 e números menores que ele. Digite um número válido (>0) para continuar ;):  )"));
+        } while (divisor<=0)
+
+        resultado = dividendo/divisor
+
+        document.write("Resultado de " + dividendo + "/" + divisor + " = " + resultado.toFixed(1))
+        
+    </script>
+</body>
+</html>

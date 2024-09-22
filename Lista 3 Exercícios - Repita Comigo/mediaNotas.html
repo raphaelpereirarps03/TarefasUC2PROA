@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Media de Notas</title>
+</head>
+<body>
+
+    <h1>
+        6 - Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final. Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?" e solicitar um resposta. Se a resposta for "S", o programa deve ser executado novamente, caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.
+    </h1>
+
+    <script>
+        let nota1 = 0;
+        let nota2 = 0;
+        let continua = true;
+        let i = 1;
+        let media = 0;
+        let aprovados = 0;
+        let resposta = "";
+
+        do {
+            nota1 = parseFloat(prompt("Entre com a primeira nota do " + i + "º aluno:" ));
+            nota2 = parseFloat(prompt("Entre com a segunda nota do "  + i + "º aluno:"));
+            media = (nota1 + nota2)/2;
+            document.write("Média das notas do " + i + "º aluno : " + media + "<br />");
+            
+
+            if (media>=9.5) {
+                document.write("Situação: Aprovado <br />");
+                aprovados++;
+            } else {
+                document.write("Situação: Reprovado <br />");
+            }
+            
+            resposta = prompt("Deseja continuar?<br /> S - Sim <br /> N - Não") 
+
+            switch (resposta) {
+                case "s":
+                    continua = true;
+                    i++
+                    break
+                case "n":
+                    continua = false;
+                    break
+                default:
+                    alert("Resposta Inválida, tente novamente. Lembrando: <br /> S - Sim <br /> N - Não")
+                    resposta = prompt("Deseja continuar?<br /> S - Sim <br /> N - Não") 
+            }
+        } while (continua);
+
+        document.write("Total de alunos analisados: "+ i +". Aprovados: " + aprovados + ".<br />");
+
+    </script>
+    
+</body>
+</html>

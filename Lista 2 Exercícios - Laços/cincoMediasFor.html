@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculando média de 5 valores com For </title>
+</head>
+<body>
+    <h1>
+        34 - Faça um programa que leia 5 números inteiros usando o loop "for" e exiba a média aritmética dos valores lidos.
+    </h1>
+
+    <script>
+        let valorText="";
+        let valor = 0;
+        let soma=0;
+        let media = 0;
+        
+        let numeros ="";
+        for (let i=1;i<6;i++) {
+           valorText = prompt("Entre com o " + i + "º valor para calcularmos a média: ");
+           numeros = numeros + valorText + ", ";
+           valor = parseInt(valorText);
+           soma = soma + valor;
+           
+        }
+
+
+        media = (soma/5).toFixed(1);
+        document.write("A Média dos números " + numeros + " é: " + media);
+        
+    </script>
+    
+</body>
+</html>
