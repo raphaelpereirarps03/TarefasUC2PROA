@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tabuadas até N</title>
+</head>
+<body>
+
+    <h1> 10 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário. </h1>
+    
+    <script>
+        let tabuada = parseInt(prompt("Entre com um número para fazermos todas as tabuadas até a tabuada dele: "));
+        
+        for (let i=1;i<=tabuada;i++) {
+            document.write("Tabuada do " + i + "<br />")
+            for (let j=1; j<=10; j++) {
+                document.write(i + " * " + j + " = " + (i*j) + "<br />");
+            }
+            document.write("<br />");
+        }
+    </script>
+</body>
+</html>
