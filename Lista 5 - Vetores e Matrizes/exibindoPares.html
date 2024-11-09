@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exibindo apenas pares </title>
+</head>
+<body>
+    <h1>94) Escreva um programa que leia 7 números inteiros e exiba apenas os números pares.</h1>
+
+    <script>
+        let numeros = [];
+        let pares  = [];
+        
+
+
+        for (let i = 0; i < 7; i++) {
+            numeros[i] = parseInt(prompt("Entre com o " + (i + 1) + "º número:"));
+        }
+
+
+        numeros.forEach(numero => {
+            if (numero % 2 == 0) {
+                pares.push(numero);
+            }
+        });
+
+
+        document.write("Os pares são: <br>");
+        pares.forEach(pares => document.write(pares + "<br>"));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Negativos e Positivos</title>
+</head>
+<body>
+    <h1> 90)Faça um programa que leia 5 números inteiros e verifique se algum deles é igual a zero. </h1>
+
+    <script>
+        let numeros = [];
+        let zero = false;
+
+        for (let i = 0; i < 5; i++) {
+            numeros[i] = parseInt(prompt("Entre com o " + (i + 1) + "º número:"));
+        }
+
+        numeros.forEach(numero => {
+            if (numero == 0 ) {
+                zero = true;
+            }
+        });
+
+        if (zero == true ) {
+            document.write("Existe pelo menos um número zero no array 'numeros'.");
+        } else {
+            document.write("Não existe nenhum número zero no array 'numeros'.");
+        }
+    </script>
+</body>
+</html>

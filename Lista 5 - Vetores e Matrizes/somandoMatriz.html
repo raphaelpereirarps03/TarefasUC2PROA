@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Somando conteúdo de uma Matriz </title>
+</head>
+
+<body>
+    <h1> 97) Escreva um programa que leia uma matriz 2x2 de números inteiros e calcule a soma de todos os elementos.
+    </h1>
+
+    <script>
+
+        let matriz = new Array(2);
+        let soma = 0;
+        let i, j;
+
+        for (i = 0; i < 2; i++) {
+            matriz[i] = new Array(2);
+            for (j = 0; j < 2; j++) {
+                matriz[i][j] = parseInt(prompt("Digite o valor da posição [" + i + ","
+                    + j + "] da matriz:"));
+            }
+        }
+
+        document.write("<table border='1'>");
+        for (i = 0; i < 2; i++) {
+            document.write("<tr>");
+            for (j = 0; j < 2; j++) {
+                document.write("<td>" + matriz[i][j] + "</td>");
+            }
+        }
+        document.write("</table>");
+
+
+        for (i = 0; i < 2; i++) {
+            for (j = 0; j < 2; j++) {
+                soma += matriz[i][j];
+            }
+        }
+        document.write("A soma dos elementos da matriz é: " + soma);
+
+
+
+    </script>
+
+</body>
+
+</html>

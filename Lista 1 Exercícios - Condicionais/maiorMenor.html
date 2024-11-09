@@ -6,7 +6,7 @@
     <title> Ordem Crescente </title>
 </head>
 <body>
-    <h1> Ordem Crescente</h1>
+    <h1> Ordem Decrescente</h1>
     <script>
         let n1 = parseInt(prompt("Entre com o primeiro valor: "));
         let n2 = parseInt(prompt("Entre com o segundo valor: "));
@@ -21,6 +21,7 @@
         } else {
             maior = n3
         }
+
         if (n1<n2 && n1<n3) {
             menor = n1
         } else if (n2<n1 && n2<n3) {
@@ -28,6 +29,7 @@
         } else {
             menor = n3
         }
+        
         if (n1<maior && n1>menor ) {
             meio = n1
         } else if (n2<maior && n2>menor) {

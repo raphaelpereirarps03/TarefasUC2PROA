@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem Crescente de Vetor</title>
+</head>
+<body>
+    <h1> 86) Crie um programa que leia 10 números inteiros e exiba-os em ordem crescente. </h1>
+    
+
+    <script>
+        let numeros = [];
+        let i = 0;
+        let ordemCresc = [];
+
+        for (; i<10; i++) {
+            let numero = parseInt(prompt("Digite o " + (i+1) + "º número :"));
+            numeros.push(numero);
+            
+        }
+
+        document.write("Ordem digitada: <br />" )
+        for (i=0; i<10; i++) {
+            document.write(numeros[i] + "<br />");
+        }
+
+        numeros.sort(function(a, b) {
+            return a - b;
+            
+        });
+        
+        
+        document.write("Ordem crescente: <br />" )
+        for (i=0; i<10; i++) {
+            document.write(numeros[i] + "<br />");
+        }
+
+        
+
+    </script>
+</body>
+</html>

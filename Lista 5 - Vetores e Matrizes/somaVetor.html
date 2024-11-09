@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de um Vetor</title>
+</head>
+<body>
+    <h1>
+        82) Escreva um programa que leia 10 números inteiros e exiba a soma deles.
+    </h1>
+
+    <script>
+        let numeros = [];
+        let i = 0;
+        let soma = 0;
+
+        while (i < 10) {
+            numeros[i] = parseInt(prompt("Digite um número:"));
+            soma = soma + numeros[i]
+            i++;
+        }
+
+        document.write("Os a soma dos números digitados é: " + soma);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição de Matriz</title>
+</head>
+
+<body>
+
+    <h1>96) Faça um programa que leia uma matriz 3x3 de números inteiros e exiba a matriz na tela.</h1>
+
+    <script>
+        let i, j;
+        let matriz = new Array(3);
+        for (i = 0; i < 3; i++) {
+            matriz[i] = new Array(3);
+            for (j = 0; j < 3; j++) {
+                matriz[i][j] = parseInt(prompt("Digite o valor da posição [" + i + ","
+                    + j + "] da matriz:"));
+            }
+        }
+        
+        document.write("<table border='1'>");
+        for (i = 0; i < 3; i++) {
+            document.write("<tr>");
+            for (j = 0; j < 3; j++) {
+                document.write("<td>" + matriz[i][j] + "</td>");
+            }
+        }
+        document.write("</table>");
+
+
+
+    </script>
+
+</body>
+
+</html>

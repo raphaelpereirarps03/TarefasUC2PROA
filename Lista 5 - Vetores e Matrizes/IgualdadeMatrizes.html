@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Comparando Duas Matrizes entre si </title>
+</head>
+
+<body>
+    <h1> 106) Escreva um programa que leia duas matrizes 2x2 de números inteiros e verifique se elas são iguais.
+    </h1>
+
+    <script>
+
+        let matriz1 = new Array(2);
+        let matriz2 = new Array(2);
+        let i, j;
+        let teste = true
+
+        for (i = 0; i < 2; i++) {
+            matriz1[i] = new Array(2);
+            for (j = 0; j < 2; j++) {
+                matriz1[i][j] = parseInt(prompt("Digite o valor da posição [" + i + ","
+                    + j + "] da matriz1:"));
+            }
+        }
+
+
+        document.write("Matriz 1: <br />")
+
+        document.write("<table border='1'>");
+        for (i = 0; i < 2; i++) {
+            document.write("<tr>");
+            for (j = 0; j < 2; j++) {
+                document.write("<td>" + matriz1[i][j] + "</td>");
+            }
+        }
+        document.write("</table>");
+
+        document.write("<br /> <br />");
+
+
+        for (i = 0; i < 2; i++) {
+            matriz2[i] = new Array(2);
+            for (j = 0; j < 2; j++) {
+                matriz2[i][j] = parseInt(prompt("Digite o valor da posição [" + i + ","
+                    + j + "] da matriz2:"));
+            }
+        }
+
+
+        document.write("Matriz 2: <br />")
+        document.write("<table border='1'>");
+        for (i = 0; i < 2; i++) {
+            document.write("<tr>");
+            for (j = 0; j < 2; j++) {
+                document.write("<td>" + matriz2[i][j] + "</td>");
+            }
+        }
+        document.write("</table>");
+
+
+        if (teste == true) {
+            for (let i = 0; i < 2; i++) {
+                for (let j = 0; j < 2; j++) {
+                    if (matriz1[i][j] !== matriz2[i][j]) {
+                        teste = false;
+                    }
+                }
+            } 
+        }
+
+        document.write("<br /> <br />");
+
+        if (teste == true ) {
+            document.write("São Iguais!")
+        } else{
+            document.write("Não são iguais!")
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

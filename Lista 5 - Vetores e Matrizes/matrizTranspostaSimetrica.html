@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Comparando Simetria de Uma Matriz Transposta </title>
+</head>
+
+<body>
+    <h1> 104) Crie um programa que leia uma matriz 3x3 de números inteiros e verifique se ela é simétrica (igual à sua
+        transposta).
+    </h1>
+
+    <script>
+
+        let matriz1 = new Array(3);
+        let soma1 = 0;
+        let i, j;
+        let teste = true
+
+        for (i = 0; i < 3; i++) {
+            matriz1[i] = new Array(3);
+            for (j = 0; j < 3; j++) {
+                matriz1[i][j] = parseInt(prompt("Digite o valor da posição [" + i + ","
+                    + j + "] da matriz1:"));
+            }
+        }
+
+
+        document.write("Pré: <br />")
+
+        document.write("<table border='1'>");
+        for (i = 0; i < 3; i++) {
+            document.write("<tr>");
+            for (j = 0; j < 3; j++) {
+                document.write("<td>" + matriz1[i][j] + "</td>");
+            }
+        }
+        document.write("</table>");
+
+        document.write("<br /> <br />");
+
+
+        document.write("Pós: <br />")
+        document.write("<table border='1'>");
+        for (i = 0; i < 3; i++) {
+            document.write("<tr>");
+            for (j = 0; j < 3; j++) {
+                document.write("<td>" + matriz1[j][i] + "</td>");
+            }
+        }
+        document.write("</table>");
+
+
+        if (teste == true) {
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    if (matriz1[i][j] !== matriz1[j][i]) {
+                        teste = false;
+                    }
+                }
+            } 
+        }
+
+        document.write("<br /> <br />");
+
+        if (teste == true ) {
+            document.write("É simétrica")
+        } else{
+            document.write("Não é simétrica!")
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

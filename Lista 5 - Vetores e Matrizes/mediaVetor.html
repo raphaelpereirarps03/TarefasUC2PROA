@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de um Vetor</title>
+</head>
+<body>
+    <h1>
+        83)  Crie um programa que leia 7 números inteiros e exiba a média aritmética dos valores lidos.
+    </h1>
+
+    <script>
+        let numeros = [];
+        let i = 0;
+        let soma = 0;
+
+        while (i < 7) {
+            numeros[i] = parseInt(prompt("Digite um número:"));
+            soma = soma + numeros[i]
+            i++;
+        }
+        let media = soma / 7
+
+        document.write("A média dos número digitados é: " + media);
+    </script>
+</body>
+</html>

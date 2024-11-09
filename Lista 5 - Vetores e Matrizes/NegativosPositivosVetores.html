@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Negativos e Positivos</title>
+</head>
+<body>
+    <h1> 89) Crie um programa que leia 10 números inteiros e exiba a quantidade de números positivos e a quantidade de números negativos.</h1>
+
+    <script>
+        let numeros = [];
+        let negativos = 0;
+        let positivos  = 0;
+        
+
+
+        for (let i = 0; i < 10; i++) {
+            numeros[i] = parseInt(prompt("Entre com o " + (i + 1) + "º número:"));
+        }
+
+
+        numeros.forEach(numero => {
+            if (numero >= 0 ) {
+                positivos ++;
+            } else {
+               negativos ++;
+            }
+        });
+
+
+        document.write("Quantidade positivos: " + positivos + "<br>");
+        document.write("Quantidade negativos: " + negativos + "<br>");
+
+
+    </script>
+</body>
+</html>

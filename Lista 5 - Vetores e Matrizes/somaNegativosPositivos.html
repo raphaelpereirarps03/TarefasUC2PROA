@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de negativos e positivos </title>
+</head>
+<body>
+    <h1> 91) Escreva um programa que leia 10 números inteiros e exiba a soma dos valores positivos e a soma dos valores negativos.</h1>
+
+    <script>
+        let numeros = [];
+        let positivos  = [];
+        let negativos = [];
+        
+
+
+        for (let i = 0; i < 10; i++) {
+            numeros[i] = parseInt(prompt("Entre com o " + (i + 1) + "º número:"));
+        }
+
+
+        numeros.forEach(numero => {
+            if (numero >= 0) {
+                positivos.push(numero);
+            } else {
+                negativos.push(numero);
+            }
+        });
+
+
+        document.write("Os positivos são: <br>");
+        positivos.forEach(positivo => document.write(positivo + "<br>"));
+
+
+        document.write("Os negativos são: <br>");
+        negativos.forEach(negativo => document.write(negativo + "<br>"));
+
+
+        if (positivos.length > 0) {
+            somaPositivos = positivos.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
+            document.write("A soma dos positivos é: " + somaPositivos + "<br>");
+        } else {
+            document.write("Não há números positivos para calcular a soma.<br>");
+        }
+
+
+        if (negativos.length > 0) {
+            somaNegativos = negativos.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
+            document.write("A média dos ímpares é: " + somaNegativos + "<br>");
+        } else {
+            document.write("Não há números negativos para calcular a soma.<br>");
+        }
+
+
+    </script>
+</body>
+</html>

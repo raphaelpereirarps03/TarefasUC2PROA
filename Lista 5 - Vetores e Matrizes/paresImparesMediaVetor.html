@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média dos Pares e Média dos Ímpares</title>
+</head>
+<body>
+    <h1>Escreva um programa que leia 5 números inteiros e calcule a média dos valores pares e a média dos valores ímpares.</h1>
+
+    <script>
+        let numeros = [];
+        let pares = [];
+        let impares = [];
+        let mediaPares = 0;
+        let mediaImpares = 0;
+
+
+        for (let i = 0; i < 5; i++) {
+            numeros[i] = parseInt(prompt("Entre com o " + (i + 1) + "º número:"));
+        }
+
+
+        numeros.forEach(numero => {
+            if (numero % 2 === 0) {
+                pares.push(numero);
+            } else {
+                impares.push(numero);
+            }
+        });
+
+
+        document.write("Os pares são: <br>");
+        pares.forEach(par => document.write(par + "<br>"));
+
+
+        document.write("Os ímpares são: <br>");
+        impares.forEach(impar => document.write(impar + "<br>"));
+
+
+        if (pares.length > 0) {
+            mediaPares = pares.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0) / pares.length;
+            document.write("A média dos pares é: " + mediaPares + "<br>");
+        } else {
+            document.write("Não há números pares para calcular a média.<br>");
+        }
+
+
+        if (impares.length > 0) {
+            mediaImpares = impares.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0) / impares.length;
+            document.write("A média dos ímpares é: " + mediaImpares + "<br>");
+        } else {
+            document.write("Não há números ímpares para calcular a média.<br>");
+        }
+    </script>
+</body>
+</html>
